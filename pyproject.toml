@@ -10,6 +10,8 @@ packages = [{include = "tempuslabra"}]
 python = ">=3.8,<4.0"
 freezegun = "^1.3.1"
 coverage = "^7.3.2"
+ruff = "^0.1.7"
+sourcery = "^1.14.0"
 
 [build-system]
 requires = ["poetry-core"]

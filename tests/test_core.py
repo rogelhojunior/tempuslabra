@@ -1,5 +1,5 @@
 from freezegun import freeze_time
-from tempuslabra.core import timeit
+from tempuslabra import timeit
 
 from io import StringIO
 import sys
