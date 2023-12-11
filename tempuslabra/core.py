@@ -1,5 +1,6 @@
 import time
 from datetime import timedelta
+from .utils import i18n
 
 def timeit(func):
     def wrapper(*args, **kwargs):
@@ -19,19 +20,16 @@ def format_time(seconds):
     td = timedelta(seconds=seconds)
     hours, remainder = divmod(td.seconds, 3600)
     minutes, seconds = divmod(remainder, 60)
+    milliseconds = td.microseconds // 1000
 
-    formatted_params = []
-    if hours:
-        formatted_params.append(f'{int(hours)} hours')
+    formatted_params = [
+        i18n.t('hours', count=hours),
+        i18n.t('minutes', count=minutes),
+        i18n.t('seconds', count=seconds),
+        i18n.t('milliseconds', count=milliseconds),
+    ]
 
-    if minutes:
-        formatted_params.append(f'{int(minutes)} minutes')
-
-    if seconds:
-        formatted_params.append(f'{int(seconds)} seconds')
-
-    if milliseconds := td.microseconds // 1000:
-        formatted_params.append(f'{int(milliseconds)} milliseconds')
+    formatted_params = list(filter(None, formatted_params))
 
     formatted_time = ", ".join(formatted_params)
 

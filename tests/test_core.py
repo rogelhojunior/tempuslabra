@@ -32,7 +32,7 @@ class TestTimeIt(unittest.TestCase):
         dummy_function()
 
     @freeze_time("Dec 14th, 2023", auto_tick_seconds=65)
-    @validate_output(expected_output='took 1 minutes and 5 seconds to run.')
+    @validate_output(expected_output='took 1 minute and 5 seconds to run.')
     @timeit
     def test_elapsed_minute(self):
         dummy_function()
@@ -44,7 +44,7 @@ class TestTimeIt(unittest.TestCase):
         dummy_function()
 
     @freeze_time("Dec 14th, 2023", auto_tick_seconds=3715)
-    @validate_output(expected_output='took 1 hours, 1 minutes and 55 seconds to run.')
+    @validate_output(expected_output='took 1 hour, 1 minute and 55 seconds to run.')
     @timeit
     def test_elapsed_hour(self):
         dummy_function()
