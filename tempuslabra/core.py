@@ -33,7 +33,7 @@ def format_time(seconds):
 
     formatted_time = ", ".join(formatted_params)
 
-    if ',' in formatted_time:
+    if len(formatted_params) > 1:
         formatted_time = ' and'.join(formatted_time.rsplit(',', 1))
 
     return formatted_time

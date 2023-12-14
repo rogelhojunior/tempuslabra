@@ -122,13 +122,17 @@ version = "0.3.9"
 description = "Translation library for Python"
 optional = false
 python-versions = "*"
-files = [
-    {file = "python-i18n-0.3.9.tar.gz", hash = "sha256:df97f3d2364bf3a7ebfbd6cbefe8e45483468e52a9e30b909c6078f5f471e4e8"},
-    {file = "python_i18n-0.3.9-py3-none-any.whl", hash = "sha256:bda5b8d889ebd51973e22e53746417bd32783c9bd6780fd27cadbb733915651d"},
-]
+files = []
+develop = false
 
 [package.extras]
 yaml = ["pyyaml (>=3.10)"]
+
+[package.source]
+type = "git"
+url = "git@github.com:rogelhojunior/python-i18n.git"
+reference = "HEAD"
+resolved_reference = "4b7deea70b07b4286c96a59cc176abe14784b360"
 
 [[package]]
 name = "ruff"
@@ -182,4 +186,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<4.0"
-content-hash = "ebeed595109f19cde113643e44b812f2ae198a25ac7f74ecdad849f9826723a5"
+content-hash = "819f1f17f43b559de6854aa9a432c0d3e3dab3a28a04b34a92c7032843864ccd"
